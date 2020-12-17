@@ -3,7 +3,9 @@
   
   
 * * *
- https://rasmuslynge.github.io/SIfront/
+ http://134.209.254.220/
+ 
+ https://medium.com/@balramchavan/deploy-angular-application-in-nginx-server-on-digitalocean-ubuntu-droplet-28380524811e
 * * *
 
 
