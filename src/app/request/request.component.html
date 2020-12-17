@@ -1,0 +1,79 @@
+<div style="text-align: center;">
+<br>
+    <h1 style="font-weight: 500;">Get Travel Emails</h1>
+    <mat-divider></mat-divider>
+
+    <br>
+
+    <div class="example-container">
+        <h2 style="margin-bottom: -5px;">Info on reciever of travel emails:</h2>
+        <mat-form-field appearance="fill" style="margin: 5px;" id="email">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" placeholder="Ex. pat@example.com"  [(ngModel)]="email">
+        </mat-form-field>
+        <mat-form-field appearance="fill" style="margin: 5px;">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Dora ..." [(ngModel)]="name">
+        </mat-form-field>
+
+        <br>
+        <h2 style="margin-bottom: -2px;">Type of info in email:</h2>
+        <mat-slide-toggle color="primary" [(ngModel)]="isFlight" name="enableWifi">Fly <mat-icon aria-hidden="false"
+                aria-label="Example home icon">flight</mat-icon>
+        </mat-slide-toggle>
+        <br>
+        <mat-slide-toggle color="primary" name="enableWifi" [(ngModel)]="isHotel">Hotel <mat-icon aria-hidden="false"
+                aria-label="Example home icon">hotel</mat-icon>
+        </mat-slide-toggle>
+        <br>
+        <mat-slide-toggle color="primary" name="enableWifi" [(ngModel)]="isInfo">Country info <mat-icon aria-hidden="false"
+                aria-label="Example home icon">info</mat-icon>
+        </mat-slide-toggle>
+        <br>
+        <br>
+        <h2 style="margin-bottom: -5px;">Travel dates:</h2>
+        <mat-form-field appearance="fill">
+            <mat-label>Enter a date range</mat-label>
+            <mat-date-range-input [rangePicker]="picker">
+              <input matStartDate [(ngModel)]="dateFrom" placeholder="Start date">
+              <input matEndDate [(ngModel)]="dateTo" placeholder="End date">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+          </mat-form-field>
+        <br />
+        <h2 style="margin-bottom: -5px;">Cities:</h2>
+        <mat-form-field appearance="fill" style="margin: 5px;">
+            <mat-label>City to</mat-label>
+            <input matInput placeholder="Dora ..." [(ngModel)]="cityTo">
+            <mat-icon matSuffix>location_on</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="fill" style="margin: 5px;">
+            <mat-label>City from</mat-label>
+            <input matInput placeholder="Dora ..." [(ngModel)]="cityFrom">
+            <mat-icon matSuffix>location_on</mat-icon>
+        </mat-form-field>
+        <br>
+        <h2 style="margin-bottom: -5px;">Max prices:</h2>
+        <mat-form-field appearance="fill" style="margin: 5px;">
+            <mat-label>Max price flight</mat-label>
+            <input matInput type="number" placeholder="" [(ngModel)]="maxFlight">
+        </mat-form-field>
+        <mat-form-field appearance="fill" style="margin: 5px;">
+            <mat-label>Max price hotel</mat-label>
+            <input matInput type="number" placeholder="" [(ngModel)]="maxHotel">
+        </mat-form-field>
+        <br>
+        <h2 style="margin-bottom: -5px;">Guests:</h2>
+        <mat-form-field appearance="fill">
+            <mat-label>Number of guests</mat-label>
+            <input matInput type="number" placeholder="" [(ngModel)]="guestNumber">
+        </mat-form-field>
+
+        <br>
+        <button mat-raised-button color="primary" (click)="sendRequest()" style="margin-bottom: 15px;">SEND</button>
+        <br>
+
+
+    </div>
+</div>
